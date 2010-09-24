@@ -1,0 +1,13 @@
+.bdPane {
+  overflow: auto;
+  background-color:#F0F0F0;
+  height:100%;
+  width:100%;
+  position:relative;
+}
+
+.bdPaneHeader {
+  margin:.5em 0 0 .5em;
+  font-size:200%;
+  border-bottom:2px solid black;
+}

@@ -1,0 +1,35 @@
+/*
+
+  Analogous to dijit/themes/dijit.css
+
+*/
+
+@import url("./staticText.css");
+@import url("./stateButton.css");
+@import url("./labeled.css");
+@import url("./checkBox.css");
+@import url("./radioGroup.css");
+@import url("./borderContainer.css");
+@import url("./dialog.css");
+@import url("./messageBox.css");
+
+.Hidden {
+  display:none;
+}
+
+.bdInputPane {
+  overflow: hidden;  /* need on IE so something can be reduced in size, and so scrollbars aren't temporarily displayed when resizing */
+}
+
+.bdDisabledCurtain {
+  position:absolute;
+  height:100%; 
+  width:100%; 
+  margin:0;
+  padding:0;
+  border:0;
+  z-index:100000; 
+  opacity:.5; 
+  background-color:#d00;
+}
+

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- Copyright (c) 2009, Altoviso, Inc. Use, modification, and distribution subject to terms of license. -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head> 
+    <style type= "text/css">
+      @import url("/dojo/dojo/resources/dojo.css");
+      @import url("/dojo/dijit/themes/tundra/tundra.css");
+      @import url("/bd/src/bd/themes/tundra/tundra.css");
+      .left {
+        border:1px solid blue;
+      }
+      .right {
+        border:1px solid green;
+      }
+      .top {
+        border:1px solid yellow;
+      }
+      .bottom {
+        border:1px solid orange;
+      }
+      .center {
+        border:1px solid red;
+      }
+    </style>
+    <script type="text/javascript">
+      dojo= {
+        urlMap:[
+          [/^bd/, "/bd/src/bd"],
+          [/^labeled/, "./borderContainer"]
+        ],
+        load:["labeled", "bd/test"],
+        loadQ:[function() {
+          require.def(["bd"], function(bd) {
+            //bd.test.loader.load("borderContainer-test");
+          });
+        }]
+      };
+    </script>
+    <script type="text/javascript" src="/dojo/dojo/dojo-ng.js">
+    </script>
+  </head>
+  <body class="tundra">
+    <div id="bdLoading">
+      <p>...loading...</p>
+    </div>
+  </body>
+</html>

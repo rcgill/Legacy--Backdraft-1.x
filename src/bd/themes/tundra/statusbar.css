@@ -1,0 +1,17 @@
+.tundra .bdStatusbar {
+  border-top:1px solid #7eabcd;
+  position:absolute;
+}
+
+.tundra .bdStatusbar .block {
+  display:inline-block;
+  position:absolute;
+  margin:0 5px;
+  padding:0 5px;
+  border-left:2px solid #7eabcd;
+}
+
+.tundra .bdStatusbar .message {
+  display:inline-block;
+  margin:0 5px;
+}

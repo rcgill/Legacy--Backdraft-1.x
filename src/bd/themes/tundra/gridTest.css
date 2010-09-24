@@ -1,0 +1,114 @@
+/*
+
+TODO: add IE gif images if going to support IE6.
+
+*/
+.tundra .bdGrid {
+  position: absolute;
+  overflow:hidden;
+/*
+  border: 3px solid black;
+*/
+  background-color: #a0a0a0;
+}
+
+.tundra .bdGridMain {
+  position: absolute;
+  overflow:hidden;
+  background-color: #b0b0b0;
+  border: 3px solid aqua;
+}
+
+.tundra .bdGridLineFirst {
+  position: absolute;
+  overflow:hidden;
+  border: 3px solid fuchsia;
+}
+
+.tundra .bdGridLine {
+  position: absolute;
+  overflow:hidden;
+  border: 3px solid lime;
+}
+
+.tundra .bdGridLineLast {
+  position: absolute;
+  overflow:hidden;
+  border: 3px solid olive;
+  border: 3px solid yellow;
+}
+
+.tundra .bdGridLineOnly {
+  position: absolute;
+  overflow:hidden;
+  border: 3px solid teal;
+}
+
+.tundra .bdGridRowFirst {
+  position: absolute;
+  overflow:hidden;
+  border: 3px solid red;
+}
+
+.tundra .bdGridRow {
+  position: absolute;
+  overflow:hidden;
+  border: 3px solid marroon;
+}
+
+.tundra .bdGridRowLast {
+  position: absolute;
+  overflow:hidden;
+  border: 3px solid orange;
+}
+
+.tundra .bdGridRowOnly {
+  position: absolute;
+  overflow:hidden;
+  border: 3px solid navy;
+}
+
+.tundra .bdGridCellFirst {
+  position: absolute;
+  overflow:hidden;
+  border: 3px solid purple;
+}
+
+.tundra .bdGridCell {
+  position: absolute;
+  overflow:hidden;
+  border: 3px solid blue;
+}
+
+.tundra .bdGridCellLast {
+  position: absolute;
+  overflow:hidden;
+  border: 3px solid green;
+}
+
+.tundra .bdGridCellOnly {
+  position: absolute;
+  overflow:hidden;
+  border: 3px solid navy;
+}
+
+.tundra .bdGridHeader {
+  position: absolute;
+  overflow:hidden;
+  border: 3px solid blue;
+  background-color: #c0c0c0;
+}
+
+.tundra .bdGridHeaderLine {
+  position: absolute;
+  overflow:hidden;
+  border: 3px solid red;
+  background-color: #c0c0c0;
+}
+
+.tundra .bdGridFooter {
+  position: absolute;
+  overflow:hidden;
+  border: 3px solid teal;
+  background-color: #d0d0d0;
+}

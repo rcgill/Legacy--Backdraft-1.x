@@ -1,0 +1,7 @@
+.tundra .messageboxButton {
+  float:right;
+}
+
+.tundra .messageboxButton button {
+  width:5em;
+}

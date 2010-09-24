@@ -1,0 +1,25 @@
+.bdBorderContainer {
+  position:absolute;
+  background-color: #fcfcfc;
+}
+
+.bdBorderContainerCurtain {
+  position:absolute; 
+  height:100%; 
+  width:100%; 
+  z-index:-1; 
+  opacity:.5; 
+  background-color:#dddddd;
+}
+
+.bdSplitterH {
+  position:absolute;
+  z-index:2;
+	cursor: ns-resize;
+}
+
+.bdSplitterV {
+  position:absolute;
+  z-index:2;
+	cursor: ew-resize;
+}

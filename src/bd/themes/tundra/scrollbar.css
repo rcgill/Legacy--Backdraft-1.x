@@ -1,0 +1,107 @@
+/*
+
+TODO: add IE gif images if going to support IE6.
+
+*/
+.tundra .bdScrollbar {
+  position:absolute;
+  background-color:#e0e0e0;
+  cursor:pointer;
+  overflow:hidden;
+}
+
+.tundra .bdScrollbar.bdVScrollbar {
+  width:15px;
+}
+
+.tundra .bdScrollbar.bdHScrollbar {
+  height:15px;
+}
+
+.tundra .bdVScrollbar .bdScrollbarHome,
+.tundra .bdVScrollbar .bdScrollbarLineLess,
+.tundra .bdVScrollbar .bdScrollbarPageLess,
+.tundra .bdVScrollbar .bdScrollbarDrag,
+.tundra .bdVScrollbar .bdScrollbarPageMore,
+.tundra .bdVScrollbar .bdScrollbarLineMore,
+.tundra .bdVScrollbar .bdScrollbarEnd
+{
+  position:absolute;
+  left:0;
+  right:0;
+  height:14px;
+}
+
+.tundra .bdHScrollbar .bdScrollbarHome,
+.tundra .bdHScrollbar .bdScrollbarLineLess,
+.tundra .bdHScrollbar .bdScrollbarPageLess,
+.tundra .bdHScrollbar .bdScrollbarDrag,
+.tundra .bdHScrollbar .bdScrollbarPageMore,
+.tundra .bdHScrollbar .bdScrollbarLineMore,
+.tundra .bdHScrollbar .bdScrollbarEnd
+{
+  position:absolute;
+  top:0;
+  bottom:0;
+  width:14px;
+}
+
+.tundra .bdVScrollbar .bdScrollbarHome {
+  top:0;
+  background:url("./images/upEnd.png") #c0c0c0 no-repeat center;
+  border-bottom:1px solid #e0e0e0;
+}
+
+.tundra .bdVScrollbar .bdScrollbarLineLess {
+  top:15px;
+  background:url("./images/upArrow.png") #c0c0c0 no-repeat center;
+  border-bottom:1px solid #e0e0e0;
+}
+
+.tundra .bdScrollbarPageLess, 
+.tundra .bdScrollbarPageMore {
+  background-color:#e0e0e0;
+  overflow:hidden;
+}
+
+.tundra .bdScrollbarDrag {
+  background-color:#C0C0C0;
+  z-index: 5;
+}
+
+.tundra .bdVScrollbar .bdScrollbarLineMore {
+  bottom:15px;
+  background:url("./images/downArrow.png") #c0c0c0 no-repeat center; 
+  border-top:1px solid #e0e0e0;
+}
+
+.tundra .bdVScrollbar .bdScrollbarEnd {
+  bottom:0;
+  background:url("./images/downEnd.png") #c0c0c0 no-repeat center; 
+  border-top:1px solid #e0e0e0;
+}
+
+
+.tundra .bdHScrollbar .bdScrollbarHome {
+  left:0;
+  background:url("./images/leftEnd.png") #c0c0c0 no-repeat center;
+  border-right:1px solid #e0e0e0;
+}
+
+.tundra .bdHScrollbar .bdScrollbarLineLess {
+  left:15px;
+  background:url("./images/leftArrow.png") #c0c0c0 no-repeat center;
+  border-right:1px solid #e0e0e0;
+}
+
+.tundra .bdHScrollbar .bdScrollbarLineMore {
+  right:15px;
+  background:url("./images/rightArrow.png") #c0c0c0 no-repeat center; 
+  border-left:1px solid #e0e0e0;
+}
+
+.tundra .bdHScrollbar .bdScrollbarEnd {
+  right:0;
+  background:url("./images/rightEnd.png") #c0c0c0 no-repeat center; 
+  border-left:1px solid #e0e0e0;
+}

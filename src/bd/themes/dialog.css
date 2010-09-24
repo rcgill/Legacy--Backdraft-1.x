@@ -1,0 +1,116 @@
+.bdDialogCurtain {
+  position:absolute; 
+  height:100%; 
+  width:100%; 
+  z-index:-1; 
+  opacity:.5; 
+  background-color:#dddddd;
+}
+
+.bdDialog {
+	position: absolute;
+  z-index:1000;
+
+/* overflow: hidden; */       /* override overflow: auto; from ContentPane to make dragging smoother */
+}
+
+.bdDialogTitleBar {
+	cursor: move;
+}
+
+.bdDialogFixed .bdDialogTitleBar {
+	cursor:default;
+}
+
+.bdDialogCloseIcon {
+	cursor: pointer;
+}
+
+.bdDialogCurtain {
+  margin:0,
+  border:0,
+  padding:0,
+	position: absolute;
+	left: 0;
+	top: 0;
+  width:100%;
+  height:100%;
+	z-index: -1000;
+	background: #a0a0a0;
+	opacity: 0.5;
+}
+
+/* TUNDRA */
+
+
+.bdDialog {
+	background: #7eabcd;
+  margin: 0;
+	border: 3px solid #7eabcd;
+	padding: 0;
+	cursor: pointer;
+}
+
+.bdDialogSizeCursorTL,
+.bdDialogSizeCursorBR {
+	cursor: nwse-resize;
+}
+
+.bdDialogSizeCursorTR,
+.bdDialogSizeCursorBL {
+	cursor: nesw-resize;
+}
+
+.bdDialogSizeCursorTC,
+.bdDialogSizeCursorBC {
+	cursor: ns-resize;
+}
+
+.bdDialogSizeCursorCL,
+.bdDialogSizeCursorCR {
+	cursor: ew-resize;
+}
+
+.bdDialogTitleBar {
+  position:relative;
+	cursor: pointer;
+	font-weight: bold;
+  padding: 0 0 3px 5px;
+}
+
+.bdDialogTitleBar .bdDialogCloseText {
+	font-weight:normal;
+	font-size:80%;
+  line-height:80%;
+  display:block;
+  position:absolute;
+  top:0;
+  right:0;
+  margin: 0 2px 3px 0;
+/*
+  border: 1px solid #fff;
+  background-color:#346B94;
+  background-color:#a0a0a0;
+*/
+  color:#ddd;
+}
+
+.bdDialogTitleBar .bdDialogCloseIcon {
+  display:none;
+}
+
+.bdDialogCloseButtonHover .bdDialogCloseText{
+  color:#fff;
+  font-size:100%;
+  font-weight:bold;
+}
+
+.bdDialogContentFrame {
+  position:relative;
+  overflow:auto;
+  margin:0;
+  border:0;
+  padding:0;
+  background:#fff;
+}
+

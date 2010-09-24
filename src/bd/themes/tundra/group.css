@@ -1,0 +1,12 @@
+.tundra .bdDijitGroup {
+  margin: 0;
+  border: 1px solid black;
+}
+
+.tundra .bdDijitGroupText {
+  background-color:#F0F0F0;
+  font-size:smaller;
+  position:absolute;
+  margin: 0;
+  padding: 0 .5em;
+}

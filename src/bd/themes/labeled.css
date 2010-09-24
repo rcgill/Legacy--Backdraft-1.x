@@ -1,0 +1,10 @@
+.bdLabeled {
+  position:relative;
+  background-color:inherit;
+}
+
+.bdLabeled .bdText {
+  position:absolute;
+  background-color:inherit;
+  margin:2px;
+}

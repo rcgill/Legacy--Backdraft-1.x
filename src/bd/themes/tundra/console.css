@@ -1,0 +1,14 @@
+div.bdDijitConsole {
+  overflow:auto;
+}
+
+.bdDijitConsole pre {
+  padding:0;
+  margin:0;
+  border:none;
+  font-size:100%;
+  font-family: Courier, "Courier New"; 
+  line-height: 1em;
+  background-color:white;
+  color:black;
+}

@@ -1,0 +1,36 @@
+.bdCheckBoxBox {
+	background-image: url('./images/checkBox.png');
+	background-repeat: no-repeat;
+  position:absolute;
+	width: 16px;
+	height: 16px;
+  border: 0;
+	margin: 4px;
+	padding: 0;
+	background-position: -16px;
+}
+
+.bdCheckBoxBox.checked {
+	background-position: 0px;
+}
+
+.bdCheckBoxBox.disabled {
+	background-position: -48px;
+}
+
+.bdCheckBoxBox.checked.disabled {
+	background-position: -32px;
+}
+
+.bdCheckBoxBox.Hover {
+	background-position: -80px;
+}
+
+.bdCheckBoxBox.checked.Hover {
+	background-position: -64px;
+}
+
+/*
+TODO: add IE gif images if going to support IE6.
+	background-image: url('../images/checkmark.gif');
+*/

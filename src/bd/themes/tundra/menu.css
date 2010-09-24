@@ -1,0 +1,44 @@
+
+/*
+  Menu icons
+*/
+.tundra .menuIcon.none {
+  width: 1px;
+  height: 16px;
+  text-align: center;
+}
+
+.tundra .dijitMenuItemIcon {
+  display:none;
+}
+
+.tundra .commandIcon {
+  display:inline;
+  width: 16px;
+  height: 16px;
+  text-align: center;
+}
+
+.tundra .commandIcon.back,
+.tundra .commandIcon.toplevelBack{
+  background-image: url('./images/back.png');
+}
+
+.tundra .commandIcon.forward,
+.tundra .commandIcon.toplevelForward{
+  background-image: url('./images/forward.png');
+}
+
+.tundra .commandIcon.recent,
+.tundra .commandIcon.toplevelRecent{
+  background-image: url('./images/down.png');
+}
+
+.tundra div.indexToolbar {
+  border:1px solid #7EABCD;
+  border-top-width:0;
+}
+
+.tundra span.menuMnemonic {
+  text-decoration:underline;
+}

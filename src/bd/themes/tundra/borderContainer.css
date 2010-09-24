@@ -1,0 +1,14 @@
+.bdSplitterH {
+  background:#7eabcd;
+  height:3px;
+}
+
+.bdSplitterV {
+  background:#7eabcd;
+  width:3px;
+}
+
+.bdSplitterH.Hover, .bdSplitterV.Hover {
+  background-color:#423BD1;
+}
+

@@ -1,0 +1,18 @@
+.tundra .bdDialog {
+}
+
+.tundra .bdDialog .bdDialogClientArea {
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  background-color:#F0F0F0;
+}
+
+.tundra .bdDialog .bdDialogContainer {
+  position:absolute;
+  top:1em;
+  bottom:1em;
+  left:1em;
+  right:1em;
+}

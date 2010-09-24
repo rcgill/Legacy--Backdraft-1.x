@@ -1,0 +1,13 @@
+.bdCheckBox {
+  position:absolute;
+  background-color:inherit;
+}
+
+.bdCheckBox.Focused {
+  outline:1px dotted black;
+  background-color:#FCFCD2;
+}
+
+.bdCheckBox > div {
+  outline:0;
+}

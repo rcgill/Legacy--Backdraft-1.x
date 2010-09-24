@@ -1,0 +1,94 @@
+/*
+  Styles BAF components consistent with the dojo Tundra theme.
+
+  BAF styling leverages dojo styling. BAF widgets are stylized the same way dojo dijit components are.
+
+  This theme assumes the dojo Tundra theme has been loaded.
+
+*/
+
+@import url("../widget.css");
+@import url("staticText.css");
+@import url("group.css");
+@import url("labeledWidget.css");
+@import url("radioGroup.css");
+@import url("borderContainer.css");
+@import url("scrollbar.css");
+@import url("grid.css");
+@import url("checkBox.css");
+@import url("pane.css");
+@import url("group.css");
+@import url("statusbar.css");
+@import url("dialog.css");
+@import url("listbox.css");
+@import url("messagebox.css");
+@import url("menu.css");
+@import url("console.css");
+
+.commandItemHotKey {
+  text-decoration:underline;
+}
+
+html, body {
+  height: 100%; 
+  width: 100%;
+}
+
+
+/*
+  The loading pacifier...
+*/
+#root {
+  overflow:hidden;
+}
+
+#bdLoading {
+  margin:0;
+  padding:5em 0 0 0;
+}
+
+#bdLoadingFrame {
+  margin:auto;
+  width:500px;
+  text-align:center;
+  overflow:hidden;
+  position:relative;
+  border: 1px solid blue;
+  background-color: #eeeeee;
+}
+
+#bdLoading h1 {
+  font-size:300%;
+  font-weight:bold;
+  color:#7eabcd;
+}
+
+#bdLoading .copy {
+  margin:1em;
+  margin-top:60px;
+  line-height:1.2em;
+}
+
+#runnerOuter {
+  position:relative; 
+  height:15px; 
+}
+
+#runnerFrame {
+  position:absolute;
+  height:100%; 
+  left:50px;
+  right:50px;
+  border:1px solid blue;
+  background-color:white;
+  overflow:hidden;
+}
+
+#runner {
+  position:relative;
+  background-image:url(images/running.gif);
+  background-repeat:repeat-y;
+  height:100%;
+  width:100px;
+  left:-100px;
+}
