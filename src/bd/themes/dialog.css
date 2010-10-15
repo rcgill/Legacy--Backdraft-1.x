@@ -1,17 +1,6 @@
-.bdDialogCurtain {
-  position:absolute; 
-  height:100%; 
-  width:100%; 
-  z-index:-1; 
-  opacity:.5; 
-  background-color:#dddddd;
-}
-
 .bdDialog {
 	position: absolute;
   z-index:1000;
-
-/* overflow: hidden; */       /* override overflow: auto; from ContentPane to make dragging smoother */
 }
 
 .bdDialogTitleBar {
@@ -27,9 +16,9 @@
 }
 
 .bdDialogCurtain {
-  margin:0,
-  border:0,
-  padding:0,
+  margin:0;
+  border:0;
+  padding:0;
 	position: absolute;
 	left: 0;
 	top: 0;

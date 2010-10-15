@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- Copyright (c) 2009-2010 Altoviso LLC. Use, modification, and distribution subject to terms of license. -->
+<html>
+  <head> 
+    <title>Backdraft Demonstration - Hello World</title>
+    <style type="text/css">
+      @import url("../../dojo-sie/dojo/resources/dojo.css");
+      @import url("../../dojo-sie/dijit/themes/tundra/tundra.css");
+      @import url("../../src/bd/themes/tundra/tundra.css");
+    </style>
+    <script type="text/javascript">
+      var require= {
+        urlMap: [
+          [/^bd/, "../../src/bd"],
+          [/^helloWorld/, "../helloWorld"]
+        ],
+        load: ["helloWorld/main"],
+      };
+    </script>
+    <script type="text/javascript" src= "../../dojo-sie/dojo/dojo-sie.js"></script>
+  </head>
+  <body class="tundra">
+    <div id="bdLoading">loading</div>
+  </body>
+</html>

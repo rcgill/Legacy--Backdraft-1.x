@@ -17,6 +17,69 @@ require.def("bd/widget/menu", [
 ///
 // Defines the Backdraft extensions to the dojo menu machinery.
 
+dijit._MenuBase.extend({
+  _checkMnemonic: function(evt) {
+    for (var targetChar= evt.keyChar.toLowerCase(), children= this.getChildren(), i= children.length; i--;) {
+      if (targetChar===children[i].mnemonic) {
+        this.onItemClick(children[i], evt);
+        return;
+      }
+    }
+  },
+
+	onClose: function(){
+		// summary:
+		//		Callback when this menu is closed.
+		//		This is called by the popup manager as notification that the menu
+		//		was closed.
+		// tags:
+		//		private
+
+		this._stopFocusTimer();
+		this._markInactive();
+		this.isShowingNow = false;
+		this.parentMenu = null;
+
+    //ALTOVISO
+    this.focusedChild= null;
+    this._hoveredChild= null;
+	}
+});
+
+dijit.Menu.extend({
+	_onKeyPress: function(/*Event*/ evt){
+		// summary:
+		//		Handle keyboard based menu navigation.
+		// tags:
+		//		protected
+
+		if(evt.ctrlKey || evt.altKey){ return; }
+
+		switch(evt.charOrCode){
+			case this._openSubMenuKey:
+				this._moveToPopup(evt);
+				dojo.stopEvent(evt);
+				break;
+			case this._closeSubMenuKey:
+				if(this.parentMenu){
+					if(this.parentMenu._isMenuBar){
+						this.parentMenu.focusPrev();
+					}else{
+						this.onCancel(false);
+					}
+				}else{
+					dojo.stopEvent(evt);
+				}
+				break;
+      //ALTOVISO
+      default:
+        this._checkMnemonic(evt);
+        dojo.stopEvent(evt);
+        break;
+		}
+	}
+});
+
 
 var
 populateMenu= function(
@@ -121,10 +184,16 @@ bd.declare(
   "bd:widget.menubarItem", 
   
   //superclasses
-  [dijit.MenuBarItem], 
+  [dijit.MenuItem], 
   
   //members
   {
+	templateString: 
+    '<div class="dijitReset dijitInline dijitMenuItem dijitMenuItemLabel" dojoAttachPoint="focusNode" waiRole="menuitem" tabIndex="-1" dojoAttachEvent="onmouseenter:_onHover,onmouseleave:_onUnhover,ondijitclick:_onClick">' +
+      '<img src="${_blankGif}" alt="" class="dijitMenuItemIcon" dojoAttachPoint="iconNode"></img>' +
+    	'<span dojoAttachPoint="containerNode"></span>' +
+    '</div>',
+
   constructor: function(
     rootMenu,   //(bd.widget.toplevelMenu) Gives the target menu to which to send item selection notifications.
     commandItem //(bd.command.item) Gives all menu item properties (text, accelerator, etc.) required to create the item.
@@ -140,6 +209,10 @@ bd.declare(
     this.rootMenu= rootMenu;
     this.commandId= dojo.isString(commandItem) ? commandItem : commandItem.id;
     this.inherited(arguments, makePostscriptParams(commandItem));
+  },
+
+  setAccelKeyAttr:function(){
+    //override; don't show accelerator key info on menu bar items
   },
 
   onClick: function() {

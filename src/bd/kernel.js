@@ -9,6 +9,39 @@ require.def("bd/kernel", [
 //note
 // Typically, client programs do not load this module directly, but rather load the module bd. See module.bd.
 
+// patch up dijit/_base/focus
+dijit.documentFocused= true;
+dijit.getFocusedWidget= function() {
+  if (this._activeStack.length) {
+    return dijit.byId(this._activeStack[this._activeStack.length-1]);
+  } else {
+    return null;
+  }
+};
+dijit._prevStack= [];
+var dijit_onBlurNode= dijit._onBlurNode;
+dijit._onBlurNode= function(node) {
+  if (node && node.nodeType==9) {
+    dojo.publish("blurDocument");
+    dijit.documentFocused= false;
+  }
+  return dijit_onBlurNode(node);
+};
+var dijit_onFocusNode= dijit._onFocusNode;
+dijit._onFocusNode= function(node) {
+  if (!dijit.documentFocused) {
+    dijit.documentFocused= true;
+    dojo.publish("focusDocument");
+  }
+  return dijit_onFocusNode(node);
+};
+var dijit_setStack= dijit._setStack;
+dijit._setStack= function(newStack, by) {
+  dijit._prevStack= dijit._activeStack;
+  return dijit_setStack(newStack, by);
+};
+
+
 var bd= 
   ///namespace
   // The top-level namespace for the Backdraft browser application framework. //The bd namespace

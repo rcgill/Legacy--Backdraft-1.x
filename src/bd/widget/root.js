@@ -48,7 +48,8 @@ return bd.declare(
   },
 
   destroyLoadingMessage:function() {
-    dojo._destroyElement(dojo.byId("bdLoading"));
+    var node= dojo.byId("bdLoading");
+    node &&  dojo._destroyElement(node);
   },
 
   resize: function() {

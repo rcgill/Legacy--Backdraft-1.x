@@ -66,7 +66,7 @@ bd.start= function(
   callback //(function(), optional) Function to apply after everything has been created.
 ) {
   ///
-  // Starts the application. //
+  // Starts the application.
   // 
   // 1. Trys to create the root widget (bd.root) if it's not already created as given by args.rootCreateArgs or 
   //    bd.config.rootCreateArgs (if either); if created, stores the result in bd.root.
@@ -114,7 +114,7 @@ bd.start= function(
           if (lastFocused) {
             lastFocused.focus();
           } else {
-            bd.top.focus();
+            (bd.top && bd.top.focus && bd.top.focus()) || document.body.focus();
           }
         });
         dojo.subscribe("blurDocument", function() {
@@ -122,7 +122,12 @@ bd.start= function(
         });
     
         args.run && require.req(args.run);
-        setTimeout(function() {callback && dojo.addOnLoad(callback);}, 0);
+        setTimeout(function() {
+          callback && dojo.addOnLoad(callback);
+          if (!dijit.curFocus) {
+            document.body.focus();
+          }
+        }, 0);
       });
     };
   if (!root && rootCreateArgs) {

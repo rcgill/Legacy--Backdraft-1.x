@@ -88,10 +88,15 @@ bd.declare(
     if (bd.isObject(name)) {
       forEachHash(name, function(value, name) { this.set(name, value); }, this);
       return this;
-    } else {
+    }
+    if (this.has(name)==2) {
+      //the dijit focus manager unconditionally calls widget.set("focused", true)
+      //TODO submit dojo RFE for this behavior
       var oldValue= this[name + "Set"](value);
       oldValue!==bd.failed && oldValue!==value && this.adviseWatchers(name, oldValue, value);
       return oldValue;
+    } else {
+      return undefined;
     }
   },
 

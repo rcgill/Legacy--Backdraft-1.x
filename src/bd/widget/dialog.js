@@ -9,12 +9,22 @@ require.def("bd/widget/dialog", [
   "bd/htmlGen",
   "bd/async",
   "bd/mouse",
+  "bd/css",
   "dojo/dnd/Moveable",
   "dojo/dnd/TimedMoveable",
-  "i18n!dijit/nls/common"
+  "i18n!dijit/nls/common",
+  "i18n!bd/nls/command"
 ], function(dojo, dijit, bd) {
 ///
 // Defines the bd.widget.dialog and associated machinery.
+
+
+ 
+var dialogCommands= dojo.getL10n("bd", "command");
+bd.forEach(["next", "previous", "dialogOk", "dialogCancel"], function(commandId) {
+  bd.command.addItem(dialogCommands[commandId]);
+});
+
 
 var 
   dialogCurtain= 0,
@@ -48,7 +58,7 @@ bd.setDialogCurtain= function(
   ) {
     ///
     // Sets the Backdraft dialog manager's curtain's z-index; see bd.dialogStack.
-    dojo.style(getDialogCurtain(), {zIndex:zIndex});
+    dojo.style(getDialogCurtain(), zIndex==-1000 ? {display:"none"} : {display:"", zIndex:zIndex});
   };
 
 return bd.declare(
