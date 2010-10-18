@@ -29,10 +29,16 @@ require.def("bd/buildTools", [
   };
 
   bd.devTools.dumpBuildScript= function() {
-    bd.forEach(bd.head.childNodes, function(n) {
+    bd.forEach(document.getElementsByTagName("head")[0].childNodes, function(n) {
       if (n.nodeName=="SCRIPT") {
         console.log(n.src);
       }
     });
+    bd.forEachHash(require.modules, function(value, url) {
+      if (/^text/.test(url)) {
+        console.log(url);
+      }
+    });
+
   };
 });

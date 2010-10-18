@@ -2,7 +2,7 @@
 <!-- Copyright (c) 2009-2010 Altoviso LLC. Use, modification, and distribution subject to terms of license. -->
 <html>
   <head> 
-    <title>Backdraft Demonstration - Hello World</title>
+    <title>Backdraft Demonstration - Application Frame</title>
     <style type="text/css">
       @import url("../../dojo-sie/dojo/resources/dojo.css");
       @import url("../../dojo-sie/dijit/themes/tundra/tundra.css");
@@ -12,9 +12,10 @@
       var require= {
         urlMap: [
           [/^bd/, "../../src/bd"],
-          [/^helloWorld/, "../helloWorld"]
+          [/^appFrame/, "../appFrame"]
         ],
-        load: ["helloWorld/main"],
+        pageLoaded: 1,
+        load: ["appFrame/main"],
       };
     </script>
     <script type="text/javascript" src= "../../dojo-sie/dojo/dojo-sie.js"></script>

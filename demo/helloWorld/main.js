@@ -1,4 +1,4 @@
-require.def(["dojo", "bd", "bd/command/accelerators", "bd/widget/messageBox"], function(dojo, bd) {
+require.def("helloWorld/main", ["dojo", "bd", "bd/command/accelerators", "bd/widget/messageBox"], function(dojo, bd) {
 
   // insert six accelerators; connect each to the same command id as the accelerator key; connect
   // each command id to a handler that shows a message box telling the user which acclerator was
@@ -22,3 +22,4 @@ require.def(["dojo", "bd", "bd/command/accelerators", "bd/widget/messageBox"], f
     }
   }});
 });
+// Copyright (c) 2009-2010, ALTOVISO LLC (www.altoviso.com). Use, modification, and distribution subject to terms of license.
