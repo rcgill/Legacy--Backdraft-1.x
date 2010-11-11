@@ -1,4 +1,4 @@
-require.def("stateButton", ["bd", "bd/css"], function(bd) {
+define("stateButton", ["bd", "bd/css"], function(bd) {
   var 
     count= 0,
     posit= function() {

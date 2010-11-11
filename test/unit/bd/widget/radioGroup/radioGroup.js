@@ -1,4 +1,4 @@
-require.def("radioGroup", ["bd"], function(bd) {
+define("radioGroup", ["bd"], function(bd) {
   var descriptor= {
     className:'bd:widget.pane',
     name:'demo',

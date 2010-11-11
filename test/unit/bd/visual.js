@@ -1,4 +1,4 @@
-require.def(["dojo", "bd", "bd/visual"], function(dojo, bd) {
+define(["dojo", "bd", "bd/visual"], function(dojo, bd) {
 
 //#include bd/test/testHelpers
 //#commentToString

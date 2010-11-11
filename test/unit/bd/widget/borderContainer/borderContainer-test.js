@@ -1,4 +1,4 @@
-require.def(["bd", "bd/test"], function(bd) {
+define(["bd", "bd/test"], function(bd) {
 
 //#include bd/test/testHelpers
 

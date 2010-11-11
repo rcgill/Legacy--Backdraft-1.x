@@ -1,4 +1,4 @@
-require.def("button", ["bd", "dijit", "bd/dijit/button", "dijit/Menu", "bd/widget/messageBox"], function(bd, dijit) {
+define("button", ["bd", "dijit", "bd/dijit/button", "dijit/Menu", "bd/widget/messageBox"], function(bd, dijit) {
   var descriptor= {
     className:'bd:widget.pane',
     name:'demo',

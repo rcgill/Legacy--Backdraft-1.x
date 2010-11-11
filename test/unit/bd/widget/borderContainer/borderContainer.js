@@ -1,4 +1,4 @@
-require.def("borderContainer", ["bd"], function(bd) {
+define("borderContainer", ["bd"], function(bd) {
   var descriptor= {
     className:'bd:widget.pane',
     name:'demo',

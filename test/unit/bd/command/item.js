@@ -1,4 +1,4 @@
-require.def(["bd", "bd/command/item"], function(bd) {
+define(["bd", "bd/command/item"], function(bd) {
 
 //#include bd/test/testHelpers
 //#commentToString

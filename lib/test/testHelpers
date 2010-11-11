@@ -1,0 +1,30 @@
+debugger; //TODO require needs to be passed as a lexical variable
+var
+  //a bunch of light syntax sugar
+  bd= require("bd"),
+  describe= bd.test.describe,
+  theFunction= bd.test.describeFunction,
+  theVar= bd.test.describeVariable,
+  theMember= bd.test.describeMember,
+  theClass= bd.test.describeClass,
+  argument= bd.test.describeArgument,
+  scaffold= bd.test.scaffold,
+  demo= bd.test.demo,
+  userDemo= bd.test.userDemo,
+  todo= bd.test.todo,
+  note= bd.test.note,
+  see= bd.test.see,
+  the= bd.test.the,
+  pass= bd.test.pass,
+  fail= bd.test.fail,
+  once= "once",
+  each= "each",
+  //the preprocessor will set the variable moduleName to the name of the module being read
+  module= function() {
+    var module= bd.test.proc.get(moduleName);
+    module.set.apply(module, arguments);
+  },
+  skip_describe= function() {
+    //by prefixing a describe with "skip_", the tree rooted at that describe is effectively "commented out"
+    return null;
+  };

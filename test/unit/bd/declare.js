@@ -1,4 +1,4 @@
-require.def(["dojo", "bd", "bd/connect"], function(dojo, bd) {
+define(["dojo", "bd", "bd/connect"], function(dojo, bd) {
 
 //#include bd/test/testHelpers
 //#commentToString
@@ -46,7 +46,7 @@ module("The module bd/declare",
 
     //context a module name
     dojo.undef("myModule");
-    require.def("myModule", [], function() { return {}; });
+    define("myModule", [], function() { return {}; });
     result= bd.declare("classes.c6", "myModule", null, {x:10});
     o= new result();
     the(dojo.module("myModule").classes.c6).is(result);

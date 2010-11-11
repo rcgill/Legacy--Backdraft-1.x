@@ -1,4 +1,4 @@
-require.def(["bd", "bd/interactive", "bd/stateful"], function(bd) {
+define(["bd", "bd/interactive", "bd/stateful"], function(bd) {
 
 //#include bd/test/testHelpers
 //#commentToString

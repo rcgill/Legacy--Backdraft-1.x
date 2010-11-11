@@ -1,4 +1,4 @@
-require.def("textBox", ["bd", "bd/dijit/textBox"], function(bd) {
+define("textBox", ["bd", "bd/dijit/textBox"], function(bd) {
   var descriptor= {
     className:'bd:widget.pane',
     name:'demo',

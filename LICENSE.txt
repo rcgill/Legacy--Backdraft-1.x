@@ -1,3 +1,7 @@
+backdraft is available under the BSD license which is included below. Some resources (files) may not be the copyright of
+Rawld Gill and/or ALTOVISO LLC and/or may not be available under the BSD license. These resources contain explicit
+declarations of copyright in both the LICENSE.txt files in the directories in which they reside and in the resource itself.
+
 backdraft
 Copyright (c) 2007 - 2010, Rawld Gill and ALTOVISO LLC
 All rights reserved.

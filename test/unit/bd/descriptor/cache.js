@@ -1,4 +1,4 @@
-require.def(["dojo", "bd", "bd/descriptor/cache"], function(dojo, bd) {
+define(["dojo", "bd", "bd/descriptor/cache"], function(dojo, bd) {
 
 //#include bd/test/testHelpers
 

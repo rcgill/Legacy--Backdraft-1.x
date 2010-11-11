@@ -1,4 +1,4 @@
-require.def("checkBox", ["bd", "bd/widget/labeled", "bd/widget/checkBox"], function(bd) {
+define("checkBox", ["bd", "bd/widget/labeled", "bd/widget/checkBox"], function(bd) {
   var descriptor= {
     className:'bd:widget.pane',
     name:'demo',

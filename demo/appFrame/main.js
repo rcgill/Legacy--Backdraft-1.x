@@ -1,15 +1,15 @@
-require.def("appFrame/main", [
+require([
   "dojo", 
   "dijit", 
   "bd", 
+  "i18n!bd/nls/command",
   "bd/command/accelerators",
   "bd/widget/menu",
-  "i18n!bd/nls/command",
   "bd/widget/messageBox"
-], function(dojo, dijit, bd) {
+], function(dojo, dijit, bd, commandBundle) {
 
 // add the stock localized command items to the backdraft command cache
-bd.forEachHash(require.module("i18n!bd/nls/command"), function(item) {
+bd.forEachHash(commandBundle, function(item) {
   bd.command.addItem(item);
 });
 
@@ -101,7 +101,7 @@ var
       className:"bd:widget.borderContainer",
       name:"main",
       id:"main",
-      style:"width:100%; height:100%; position:absolute; top:0; left:0; z-index:-5;",
+      style:"width:100%; height:100%; position:absolute; top:0; left:0;",
       design:"headline",
       children:[menu, statusbar,
         {

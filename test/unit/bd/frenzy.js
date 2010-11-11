@@ -1,4 +1,4 @@
-require.def(["dojo", "bd", "bd/frenzy", "bd/test/mockFrenzyServer", "bd/test/mockXhr"], function(dojo, bd) {
+define(["dojo", "bd", "bd/frenzy", "bd/test/mockFrenzyServer", "bd/test/mockXhr"], function(dojo, bd) {
 
 //#include bd/test/testHelpers
 //#commentToString

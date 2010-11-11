@@ -11,7 +11,7 @@ module("The module bd/creators",
       var
         moduleName= dojo.uid(),
         theCtor;
-      require.def(moduleName, [], function() {
+      define(moduleName, [], function() {
         function someClass(a, b, c) {
           this.a= a;
           this.b= b;

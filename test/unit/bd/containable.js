@@ -1,4 +1,4 @@
-require.def(["bd", "bd/containable"], function(bd) {
+define(["bd", "bd/containable"], function(bd) {
 
 //#include bd/test/testHelpers
 

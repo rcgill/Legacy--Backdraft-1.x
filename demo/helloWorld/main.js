@@ -1,4 +1,4 @@
-require.def("helloWorld/main", ["dojo", "bd", "bd/command/accelerators", "bd/widget/messageBox"], function(dojo, bd) {
+require(["dojo", "bd", "bd/command/accelerators", "bd/widget/messageBox"], function(dojo, bd) {
 
   // insert six accelerators; connect each to the same command id as the accelerator key; connect
   // each command id to a handler that shows a message box telling the user which acclerator was

@@ -4,21 +4,12 @@
   <head> 
     <title>Backdraft Demonstration - Application Frame</title>
     <style type="text/css">
-      @import url("../../dojo-sie/dojo/resources/dojo.css");
-      @import url("../../dojo-sie/dijit/themes/tundra/tundra.css");
-      @import url("../../src/bd/themes/tundra/tundra.css");
+      @import url("../../../dojo-v2x/lib/resources/dojo.css");
+      @import url("../../../dijit-v2x/lib/themes/tundra/tundra.css");
+      @import url("../../lib/themes/tundra/tundra.css");
     </style>
-    <script type="text/javascript">
-      var require= {
-        urlMap: [
-          [/^bd/, "../../src/bd"],
-          [/^appFrame/, "../appFrame"]
-        ],
-        pageLoaded: 1,
-        load: ["appFrame/main"],
-      };
-    </script>
-    <script type="text/javascript" src= "../../dojo-sie/dojo/dojo-sie.js"></script>
+    <script src="../config.js"></script>
+    <script data-main="main.js" src="../../loader/require.js"></script>
   </head>
   <body class="tundra">
   </body>

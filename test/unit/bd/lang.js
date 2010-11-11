@@ -570,7 +570,7 @@ module("The module bd/lang",
         demo(//[("rawld:x")] retrieves the value of the property x in the module variable rawld
           function() {
             var check= {x: {}};
-            require.def("rawld", [], check);
+            define("rawld", [], check);
             the(bd.get("rawld:x")).is(check.x);
             //clean up
             dojo.undef("rawld");
@@ -579,7 +579,7 @@ module("The module bd/lang",
         demo(//[("rawld:x.y")] retrieves the value of the property y of the property x in the global variable rawld
           function() {
             var check= {x: {y: {}}};
-            require.def("rawld", [], check);
+            define("rawld", [], check);
             the(bd.get("rawld:x.y")).is(check.x.y);
             //clean up
             dojo.undef("rawld");
@@ -591,13 +591,13 @@ module("The module bd/lang",
         the(bd.get("rawld:x")).is(undefined);
 
         //module rawld, but no x in rawld
-        require.def("rawld", [], {});
+        define("rawld", [], {});
         the(bd.get("rawld:x")).is(undefined);
         //clean up
         dojo.undef("rawld");
 
         //module rawld with x, but no y in x
-        require.def("rawld", [], {x:{}});
+        define("rawld", [], {x:{}});
         the(bd.get("rawld:x.y")).is(undefined);
         //clean up
         dojo.undef("rawld");
@@ -605,7 +605,7 @@ module("The module bd/lang",
       describe("[undefined-default] When the target is undefined and a default value is given",
         demo(//[("rawld:x", test)] sets the value of the property x in the module rawld to test
           function() {
-            require.def("rawld", [], {});
+            define("rawld", [], {});
             var test= {};
             the(bd.get("rawld:x", test)).is(test);
             the(dojo.module("rawld")).hasValue({x:test});
@@ -615,7 +615,7 @@ module("The module bd/lang",
         ),
         demo(//[("rawld:x.y", test)] sets the value of the property x in the module rawld to test
           function() {
-            require.def("rawld", [], {});
+            define("rawld", [], {});
             var test= {};
             the(bd.get("rawld:x.y", test)).is(test);
             the(dojo.module("rawld")).hasValue({x:{y:test}});
@@ -628,7 +628,7 @@ module("The module bd/lang",
         demo(//[("rawld:x", test)] does not change the value of rawld:x
           function() {
             var test1= {x:{y:{}}}, test2= {};
-            require.def("rawld", [], test1);
+            define("rawld", [], test1);
             the(bd.get("rawld:x", test2)).is(test1.x);
             the(dojo.module("rawld")).is(test1);
             //clean up
@@ -638,7 +638,7 @@ module("The module bd/lang",
         demo(//[("rawld:x.y", test)] does not change the value of rawld:x.y
           function() {
             var test1= {x:{y:{}}}, test2= {};
-            require.def("rawld", [], test1);
+            define("rawld", [], test1);
             var test= {};
             the(bd.get("rawld:x.y", test2)).is(test1.x.y);
             the(dojo.module("rawld")).is(test1);
@@ -695,7 +695,7 @@ module("The module bd/lang",
       function() {
         dojo.undef("rawld");
         the(bd.exists("x", "rawld")).is(false);
-        require.def("rawld", [], {});
+        define("rawld", [], {});
         the(bd.exists("x", "rawld")).is(false);
         dojo.module("rawld").x= {};
         the(bd.exists("x", "rawld")).is(true);
@@ -706,7 +706,7 @@ module("The module bd/lang",
       function() {
         dojo.undef("rawld");
         the(bd.exists("x.y", "rawld")).is(false);
-        require.def("rawld", [], {});
+        define("rawld", [], {});
         the(bd.exists("x.y", "rawld")).is(false);
         dojo.module("rawld").x= {};
         the(bd.exists("x.y", "rawld")).is(false);
@@ -719,7 +719,7 @@ module("The module bd/lang",
       function() {
         dojo.undef("rawld");
         the(bd.exists("x", "rawld")).is(false);
-        require.def("rawld", [], {});
+        define("rawld", [], {});
         the(bd.exists("x", "rawld")).is(false);
         dojo.module("rawld").x= {};
         the(bd.exists("x", "rawld")).is(true);
@@ -730,7 +730,7 @@ module("The module bd/lang",
       function() {
         dojo.undef("rawld");
         the(bd.exists("x.y", "rawld")).is(false);
-        require.def("rawld", [], {});
+        define("rawld", [], {});
         the(bd.exists("x.y", "rawld")).is(false);
         dojo.module("rawld").x= {};
         the(bd.exists("x.y", "rawld")).is(false);
@@ -848,7 +848,7 @@ module("The module bd/lang",
       describe("[undefined-default] When the target is undefined a new property is created",
         demo(//[("rawld:x", test)] sets the value of the property x in the module rawld to test
           function() {
-            require.def("rawld", [], {});
+            define("rawld", [], {});
             var test= {};
             the(bd.set("rawld:x", test)).is(test);
             the(dojo.module("rawld")).hasValue({x:test});
@@ -858,7 +858,7 @@ module("The module bd/lang",
         ),
         demo(//[("rawld:x.y", test)] sets the value of the property x in the module rawld to test
           function() {
-            require.def("rawld", [], {});
+            define("rawld", [], {});
             var test= {};
             the(bd.set("rawld:x.y", test)).is(test);
             the(dojo.module("rawld")).hasValue({x:{y:test}});
@@ -871,7 +871,7 @@ module("The module bd/lang",
         demo(//[("rawld:x", test)] changes the value of rawld:x
           function() {
             var test1= {x:{y:{}}}, test2= {};
-            require.def("rawld", [], test1);
+            define("rawld", [], test1);
             the(bd.set("rawld:x", test2)).is(test2);
             the(dojo.module("rawld").x).is(test2);
             //clean up
@@ -881,7 +881,7 @@ module("The module bd/lang",
         demo(//[("rawld:x.y", test)] changes the value of rawld:x.y
           function() {
             var test1= {x:{y:{}}}, test2= {};
-            require.def("rawld", [], test1);
+            define("rawld", [], test1);
             var test= {};
             the(bd.set("rawld:x.y", test2)).is(test2);
             the(dojo.module("rawld").x.y).is(test2);

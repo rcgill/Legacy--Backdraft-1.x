@@ -1,4 +1,4 @@
-require.def(["dojo", "bd", "bd/namespace"], function(dojo, bd) {
+define(["dojo", "bd", "bd/namespace"], function(dojo, bd) {
 
 //#include bd/test/testHelpers
 

@@ -1,4 +1,4 @@
-require.def("labeled", ["bd"], function(bd) {
+define("labeled", ["bd"], function(bd) {
   var descriptor= {
     className:'bd:widget.pane',
     name:'demo',

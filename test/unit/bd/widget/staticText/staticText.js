@@ -1,4 +1,4 @@
-require.def("staticText", ["bd", "bd/css"], function(bd) {
+define("staticText", ["bd", "bd/css"], function(bd) {
   bd.start();  
   var descriptor= {
     className:'bd:widget.pane',

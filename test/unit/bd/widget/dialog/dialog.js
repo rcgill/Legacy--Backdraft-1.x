@@ -1,4 +1,4 @@
-require.def("dialog", ["bd", "bd/widget/dialog"], function(bd) {
+define("dialog", ["bd", "bd/widget/dialog"], function(bd) {
   var descriptor= {
     className:'bd:widget.pane',
     name:'demo',
