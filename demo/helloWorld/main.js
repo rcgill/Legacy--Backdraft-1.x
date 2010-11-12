@@ -18,7 +18,7 @@ require(["dojo", "bd", "bd/command/accelerators", "bd/widget/messageBox"], funct
     descriptor: {
       className:"bd:widget.staticText",
       "class":"message",
-      value:"Press the A, B, or C key (shifted or not)..."
+      value:"Hello, World!! Press the A, B, or C key (shifted or not)..."
     }
   }});
 });
