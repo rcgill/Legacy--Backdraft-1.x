@@ -1,8 +1,8 @@
 require(["dojo", "bd", "bd/command/accelerators", "bd/widget/messageBox"], function(dojo, bd) {
 
-  // insert six accelerators; connect each to the same command id as the accelerator key; connect
-  // each command id to a handler that shows a message box telling the user which acclerator was
-  // just pushed.
+  // insert six accelerators; 
+  // connect each to the same command id as the accelerator key; 
+  // connect each command id to a handler that shows a message box telling the user which acclerator was pushed.
   bd.forEach("A.B.C.a.b.c".split("."), function(c) {
     bd.command.insertAccel(c, c);
     bd.command.connect(c, function() {
@@ -22,4 +22,3 @@ require(["dojo", "bd", "bd/command/accelerators", "bd/widget/messageBox"], funct
     }
   }});
 });
-// Copyright (c) 2009-2010, ALTOVISO LLC (www.altoviso.com). Use, modification, and distribution subject to terms of license.
