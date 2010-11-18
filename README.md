@@ -11,8 +11,8 @@ intelligent programming components—no more markup, no more JavaScript snippets
 
 # Project Home
 
-This is a mirror of the official backdraft repository that's maintained at [http://bdframwork.org](http://bdframwork.org
-"backdraft project home"). Warning: this repository may be slightly out of date compared to the official repository.
+This is a mirror of the official backdraft repository that's maintained at [http://bdframework.org](http://bdframework.org
+"backdraft project home") (warning: this repository may be slightly out of date compared to the official repository).
 
 # Key Attributes
 
@@ -39,7 +39,7 @@ backdraft supports an exciting new model for application construction called
 browser-compute. Browser-compute decreases construction complexity, cost, and time when building powerful,
 GUI-controlled applications, particularly applications that simultaneously target multiple operating systems
 (Windows to Android) and/or multiple platforms (desktop to phones). You can learn more about browser-compute at
-[http://www.altoviso.com/browser-compute.html](http://www.altoviso.com/browser-compute.html).
+[browser-compute](http://www.altoviso.com/articles/iface-compute.pdf).
 
 # Key Features
 
@@ -93,18 +93,18 @@ to raise the level of abstraction yet higher.
 
 #Support
 
-All support for this project is handled through the [ticket system]("http://bdframework.org/repo/reportlist"). If you
+All support for this project is handled through the [ticket system](http://bdframework.org/repo/rptview?rn=1). If you
 have a question, find a bug, have patch, or want to request an enhancement, please open a new ticket. Please make an
 attempt to find an answer by utilizing the resources available on the
-[documentation]("http://bdframework.org/repo/docs") and [demonstrations]("http://bdframework.org/repo/demos") pages
+[documentation](http://bdframework.org/docs.html) and [demonstrations](http://bdframework.org/demos.html) pages
 before filing a help ticket.
 
 #Commercial Support
 
-Commercial support is available from [ALTOVISO LLC]("http://www.altoviso.com"). ALTOVISO also has the capability to
+Commercial support is available from [ALTOVISO LLC](http://www.altoviso.com). ALTOVISO also has the capability to
 construct custom (closed source) applications as per your particular requirements. You can contact ALTOVISO by dialing
 +1.866.398.9209 x700 (United States, Pacific Time) or by email at
-[support@altoviso.com]("mailto:support@altoviso.com")</a></p>
+[support@altoviso.com](mailto:support@altoviso.com)</p>
 
 #Donate
 
