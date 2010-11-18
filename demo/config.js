@@ -1,6 +1,6 @@
 var require= {
   baseUrl: "./",
-  main: location.search=="?compiled" ? "ccompiled" : "main",
+  main: "main",
   urlMap: [
     function(name) {
       if (name=="i18n") {
