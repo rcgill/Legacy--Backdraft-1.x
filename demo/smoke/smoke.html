@@ -7,6 +7,17 @@
       var start= (new Date()).getTime();
       var require= {
         baseUrl: "./",
+        urlMap: [
+          function(name) {
+            if (name=="i18n") {
+              return "dojo/plugins/i18n";
+            }
+            if (name=="text") {
+              return "dojo/plugins/text";
+            }
+            return 0;
+          }
+        ],
         packages: [{
           name:"bd",
           location:"../.."
@@ -29,14 +40,14 @@
     </script>
     <script src="../../loader/require.js"></script>
     <script type="text/javaScript">
-      require(["dojo", "bd"], function() {
-        require.addOnLoad(function() {
+      require(["dojo", "bd"], function(dojo, bd) {
+        dojo.addOnLoad(function() {
           dojo.byId("status").innerHTML= (require.onError.log.length==0) ? 
-            "dojo-sie asynchronous loader and bootstrap loaded without errors." :
-            "dojo-sie asynchronous loader and bootstrap caused errors during bootstrapping.";
-          dojo.byId("time").innerHTML= (((new Date()).getTime() - start) / 1000) + "s";
-          var moduleList= [];
-          for (var p in require.modules) moduleList.push(p);
+            "Loaded without errors." :
+            "Errors detected.";
+          dojo.byId("time").innerHTML= ((bd.getTime() - start) / 1000) + "s";
+          var p, moduleList= [];
+          for (p in require.modules) moduleList.push(p);
           moduleList.sort();
           dojo.byId("modules").innerHTML= moduleList.join("<br/>");
         });

@@ -3,11 +3,11 @@ var require= {
   main: "main",
   urlMap: [
     function(name) {
-      if (name=="i18n") {
-        return "dojo/plugins/i18n";
+      if (name=="./i18n.js") {
+        return "../../../dojo-sie/dojo/lib/plugins/i18n.js";
       }
-      if (name=="text") {
-        return "dojo/plugins/text";
+      if (name=="./text.js") {
+        return "../../../dojo-sie/dojo/lib/plugins/text.js";
       }
       return 0;
     }
@@ -24,7 +24,7 @@ var require= {
   }],
   traceSet: {
     "loader-define":0,
-    "loader-onModule":0,
+    "loader-defineModule":0,
     "loader-runDefQ":0,
     "loader-runFactory":0,
     "loader-execModule":0,
