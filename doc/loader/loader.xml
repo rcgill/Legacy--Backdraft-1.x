@@ -36,13 +36,15 @@
         </author>
         <abstract>
             <para>The backdraft loader is a <link xlink:href="http://www.commonjs.org/"
-                    >CommonJS</link> compliant script injection loader for use loading browser-based
-                JavaScript applications. Its design places a high value on minimum size and maximum
-                run-time and build-time configurability. This tutorial is intended for the loader
-                consumer and describes how to use all loader features. The tutorial also includes
-                additional information to help build the reader's intuition and mental model of how
-                Modules/AsynchronousDefinition loaders work in general and the backdraft loader
-                works in particular.</para>
+                    >CommonJS</link>
+                <link xlink:href="http://wiki.commonjs.org/wiki/Modules/AsynchronousDefinition"
+                    >Modules/AsynchronousDefinition</link> compliant script injection loader for use
+                loading browser-based JavaScript applications. Its design places a high value on
+                minimum size and maximum run-time and build-time configurability. This tutorial is
+                intended for the loader consumer and describes how to use all loader features. The
+                tutorial also includes additional information to help build the reader's intuition
+                and mental model of how Modules/AsynchronousDefinition loaders work in general and
+                the backdraft loader works in particular.</para>
         </abstract>
     </info>
     <sect1>
