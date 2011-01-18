@@ -1,4 +1,4 @@
-require(["dojo", "bd", "i18n!bd/nls/command", "bd/command/accelerators", "bd/widget/menu", "bd/widget/messageBox"], function(dojo, bd, commandBundle) {
+define(["dojo", "bd", "i18n!bd/nls/command", "bd/command/accelerators", "bd/widget/menu", "bd/widget/messageBox"], function(dojo, bd, commandBundle) {
 
 // the backdraft command machinery includes "command items" which are localized objects
 // that give a commands UI (text, button, accelerator, etc,). Here we add the stock 

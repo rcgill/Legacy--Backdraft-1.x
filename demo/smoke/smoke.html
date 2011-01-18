@@ -6,19 +6,14 @@
     <script>
       var start= (new Date()).getTime();
       var require= {
-        baseUrl: "./",
-        urlMap: [
-          function(name) {
-            if (name=="i18n") {
-              return "dojo/plugins/i18n";
-            }
-            if (name=="text") {
-              return "dojo/plugins/text";
-            }
-            return 0;
-          }
-        ],
-        packages: [{
+        load: [],
+
+        paths:{
+          "i18n":"../../../dojo-v2x/lib/plugins/i18n",
+          "text":"../../../dojo-v2x/lib/plugins/text"
+        },
+      
+        packages:[{
           name:"bd",
           location:"../.."
         },{
@@ -28,6 +23,7 @@
           name:"dojo",
           location:"../../../dojo-v2x"
         }],
+
         traceSet: {
           "loader-define":0,
           "loader-onModule":0,
@@ -38,7 +34,7 @@
         }
       };
     </script>
-    <script src="../../loader/require.js"></script>
+    <script src="../../../bdLoad/lib/require.js"></script>
     <script type="text/javaScript">
       require(["dojo", "bd"], function(dojo, bd) {
         dojo.addOnLoad(function() {

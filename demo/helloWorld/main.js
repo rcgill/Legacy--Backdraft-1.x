@@ -1,4 +1,4 @@
-require(["dojo", "bd", "bd/command/accelerators", "bd/widget/messageBox"], function(dojo, bd) {
+define(["dojo", "bd", "bd/command/accelerators", "bd/widget/messageBox"], function(dojo, bd) {
 
   // insert six accelerators; 
   // connect each to the same command id as the accelerator key; 

@@ -615,7 +615,7 @@ urlMap: []
                     </listitem>
                 <listitem xml:id="urlTransform-baseUrl">
                     <para>If the URL computed so far is not an absolute URL (that is, a URL that
-                        begins with a protocol like "http:" or a backslash), then the value of the
+                        begins with a protocol like "http:" or a slash), then the value of the
                         package-independent <varname>baseUrl</varname> configuration variable is
                         prepended to the computed URL.</para>
                 </listitem>
