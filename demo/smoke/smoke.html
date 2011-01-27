@@ -1,63 +1,64 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-   "http://www.w3.org/TR/html4/strict.dtd">
+	 "http://www.w3.org/TR/html4/strict.dtd">
 <html>
-  <head>
-    <title>smoke backdraft demos</title>
-    <script>
-      var start= (new Date()).getTime();
-      var require= {
-        load: [],
+	<head>
+		<title>smoke backdraft demos</title>
+		<script>
+			var start= (new Date()).getTime();
+			var require= {
+				paths:{
+					"i18n":"../../../dojotoolkit-rcg/lib/plugins/i18n",
+					"text":"../../../dojotoolkit-rcg/lib/plugins/text"
+				},
+				packages:[{
+					name:"bd",
+					location:"../.."
+				},{
+					name:"dijit",
+					location:"../../../dojotoolkit-rcg/dijit",
+					lib:".",
+					main:"lib/main"
+				},{
+					name:"dojo",
+					location:"../../../dojotoolkit-rcg/dojo",
+					lib:".",
+					main:"lib/main-browser"
+				}],
 
-        paths:{
-          "i18n":"../../../dojo-v2x/lib/plugins/i18n",
-          "text":"../../../dojo-v2x/lib/plugins/text"
-        },
-      
-        packages:[{
-          name:"bd",
-          location:"../.."
-        },{
-          name:"dijit",
-          location:"../../../dijit-v2x"
-        },{
-          name:"dojo",
-          location:"../../../dojo-v2x"
-        }],
-
-        traceSet: {
-          "loader-define":0,
-          "loader-onModule":0,
-          "loader-runDefQ":0,
-          "loader-runFactory":0,
-          "loader-execModule":0,
-          "loader-execModule-out":0
-        }
-      };
-    </script>
-    <script src="../../../bdLoad/lib/require.js"></script>
-    <script type="text/javaScript">
-      require(["dojo", "bd"], function(dojo, bd) {
-        dojo.addOnLoad(function() {
-          dojo.byId("status").innerHTML= (require.onError.log.length==0) ? 
-            "Loaded without errors." :
-            "Errors detected.";
-          dojo.byId("time").innerHTML= ((bd.getTime() - start) / 1000) + "s";
-          var p, moduleList= [];
-          for (p in require.modules) moduleList.push(p);
-          moduleList.sort();
-          dojo.byId("modules").innerHTML= moduleList.join("<br/>");
-        });
-      });
-    </script>
-  </head>
-  <body class="tundra">
-    <h1>Location</h1>
-    <p>loading backdraft/demo/smoke/smoke.html</p>
-    <h1>Status</h1>
-    <p id="status">loading</p>
-    <h1>Load Time</h1>
-    <p id="time"></p>
-    <h1>Modules Loaded</h1>
-    <p id="modules"></p>
-  </body>
+				traceSet: {
+					"loader-define":0,
+					"loader-onModule":0,
+					"loader-runDefQ":0,
+					"loader-runFactory":0,
+					"loader-execModule":0,
+					"loader-execModule-out":0
+				}
+			};
+		</script>
+		<script src="../../../bdLoad/lib/require.js"></script>
+		<script type="text/javaScript">
+			require(["dojo", "bd"], function(dojo, bd) {
+				dojo.addOnLoad(function() {
+					dojo.byId("status").innerHTML= (require.onError.log.length==0) ? 
+						"Loaded without errors." :
+						"Errors detected.";
+					dojo.byId("time").innerHTML= ((bd.getTime() - start) / 1000) + "s";
+					var p, moduleList= [];
+					for (p in require.modules) moduleList.push(p);
+					moduleList.sort();
+					dojo.byId("modules").innerHTML= moduleList.join("<br/>");
+				});
+			});
+		</script>
+	</head>
+	<body class="tundra">
+		<h1>Location</h1>
+		<p>loading backdraft/demo/smoke/smoke.html</p>
+		<h1>Status</h1>
+		<p id="status">loading</p>
+		<h1>Load Time</h1>
+		<p id="time"></p>
+		<h1>Modules Loaded</h1>
+		<p id="modules"></p>
+	</body>
 </html>

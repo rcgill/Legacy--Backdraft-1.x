@@ -1,0 +1,9 @@
+project-name: backdraft
+repository:   /home/rcgill/fossils/backdraft.fossil
+local-root:   /usr/home/rcgill/git-mirrors/backdraft/work/
+project-code: d8225bb92dc341749fca70013a95f3bf483a9f97
+server-code:  5a21d54623343f043b0aa5451b4d6b715b1909d3
+checkout:     6a51edda3444fc060f709f6a0455800aef5440a1 2011-01-27 07:54:38 UTC
+parent:       7a73aeed37917ca34f9c0eca9cc301116b3ccaf5 2011-01-18 00:55:26 UTC
+tags:         trunk
+comment:      updated all demos to work with dojo [23662] (user: rcgill)
