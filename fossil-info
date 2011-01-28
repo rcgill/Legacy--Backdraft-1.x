@@ -3,7 +3,9 @@ repository:   /home/rcgill/fossils/backdraft.fossil
 local-root:   /usr/home/rcgill/git-mirrors/backdraft/work/
 project-code: d8225bb92dc341749fca70013a95f3bf483a9f97
 server-code:  5a21d54623343f043b0aa5451b4d6b715b1909d3
-checkout:     6a51edda3444fc060f709f6a0455800aef5440a1 2011-01-27 07:54:38 UTC
-parent:       7a73aeed37917ca34f9c0eca9cc301116b3ccaf5 2011-01-18 00:55:26 UTC
+checkout:     2e7a10db309f19b75e85568987db1b75ed5ffe2d 2011-01-28 06:59:25 UTC
+parent:       6a51edda3444fc060f709f6a0455800aef5440a1 2011-01-27 07:54:38 UTC
+child:        72639a622a19ddd7355e8dc3dd462ec2c43d5b0b 2011-01-28 09:46:18 UTC
 tags:         trunk
-comment:      updated all demos to work with dojo [23662] (user: rcgill)
+comment:      changed all demos to map to dojotoolkit; improved demo build
+              config; removed pacifier from styles (user: rcgill)

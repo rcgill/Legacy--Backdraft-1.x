@@ -25,7 +25,10 @@ var require= {
 		srcLoader:"../../../bdLoad/lib/require.js",
 
 		replacements: {
-			"appFrame.html": ["../../../bdLoad/lib/require.js", "boot.js"]
+			"appFrame.html": [
+        ['<script src="config.js"></script>', ""],
+        ["../../../bdLoad/lib/require.js", "boot.js"]
+      ]
 		},
 
 		layers:{
