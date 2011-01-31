@@ -11,12 +11,14 @@ var require= {
 		name:"dijit",
 		location:"../../../dojotoolkit/dijit",
 		lib:".",
-		main:"lib/main"
+		main:"lib/main",
+    exclude:[/dojo\/tests\//, /\/robot(x)?/]
 	},{
 		name:"dojo",
 		location:"../../../dojotoolkit/dojo",
 		lib:".",
-		main:"lib/main-browser"
+		main:"lib/main-browser",
+    exclude:[/dojo\/tests\//, /\/robot(x)?/]
 	}],
 
 	deps:["main"],
@@ -34,7 +36,8 @@ var require= {
 		layers:{
 			main:{
 				include:["bd/widget/root", "bd/widget/borderContainer", "bd/widget/statusbar"],
-				boot:"boot.js"
+				boot:"boot.js",
+        bootText:"require(['main']);\n"
 			}
 		}
 	}
