@@ -12,13 +12,15 @@ var require= {
 		location:"../../../dojotoolkit/dijit",
 		lib:".",
 		main:"lib/main",
-    exclude:[/dojo\/tests\//, /\/robot(x)?/]
+    exclude:[/dijit\/tests\//, /\/robot(x)?/],
+    copyDirs:[[".", ".", ["*/.*", "*/tests*" ]]]
 	},{
 		name:"dojo",
 		location:"../../../dojotoolkit/dojo",
 		lib:".",
 		main:"lib/main-browser",
-    exclude:[/dojo\/tests\//, /\/robot(x)?/]
+    exclude:[/dojo\/tests\//, /\/robot(x)?/],
+    copyDirs:[[".", ".", ["*/.*", "*/tests*" ]]]
 	}],
 
 	deps:["main"],

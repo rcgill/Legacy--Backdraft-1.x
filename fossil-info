@@ -3,7 +3,8 @@ repository:   /home/rcgill/fossils/backdraft.fossil
 local-root:   /usr/home/rcgill/git-mirrors/backdraft/work/
 project-code: d8225bb92dc341749fca70013a95f3bf483a9f97
 server-code:  5a21d54623343f043b0aa5451b4d6b715b1909d3
-checkout:     f04f2eaf593c81f9062b8e799369162a80176c24 2011-01-31 09:48:41 UTC
-parent:       72639a622a19ddd7355e8dc3dd462ec2c43d5b0b 2011-01-28 09:46:18 UTC
+checkout:     4482e88c08183747dcf0ceb2f0e1189fa429b2f8 2011-02-01 09:14:14 UTC
+parent:       f04f2eaf593c81f9062b8e799369162a80176c24 2011-01-31 09:48:41 UTC
 tags:         trunk
-comment:      updated demo configs for compat with bdLoad (user: rcgill)
+comment:      updated demo configs to work with bdBuild; demos building
+              correctly (user: rcgill)
