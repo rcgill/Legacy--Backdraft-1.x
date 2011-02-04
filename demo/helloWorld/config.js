@@ -28,12 +28,17 @@ var require= {
 	build:{
 		srcLoader:"../../../bdLoad/lib/require.js",
 
-		replacements: {
+		replacements:{
 			"helloWorld.html": [
+        ['css.css', "css/css.css"],
         ['<script src="config.js"></script>', ""],
         ["../../../bdLoad/lib/require.js", "boot.js"]
       ]
 		},
+
+    cssCompactSet:{
+      "./css/css.css":"./css.css"
+    },
 
 		layers:{
 			main:{
