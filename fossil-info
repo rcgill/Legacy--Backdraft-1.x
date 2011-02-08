@@ -3,7 +3,9 @@ repository:   /home/rcgill/fossils/backdraft.fossil
 local-root:   /usr/home/rcgill/git-mirrors/backdraft/work/
 project-code: d8225bb92dc341749fca70013a95f3bf483a9f97
 server-code:  5a21d54623343f043b0aa5451b4d6b715b1909d3
-checkout:     9e265c787ed85b1ec4aa4851f3433cc1846386e7 2011-02-04 10:02:35 UTC
-parent:       4482e88c08183747dcf0ceb2f0e1189fa429b2f8 2011-02-01 09:14:14 UTC
+checkout:     403ce93f8ea824800f9ccf7eaf4d8a3b1011c974 2011-02-08 10:25:12 UTC
+parent:       9e265c787ed85b1ec4aa4851f3433cc1846386e7 2011-02-04 10:02:35 UTC
+child:        dd8cc8b75a875f0a8ca44498bcc011d4b5ab0122 2011-02-11 09:39:34 UTC
 tags:         trunk
-comment:      added css compact to build demos (user: rcgill)
+comment:      added ie property enumeration for bd.mix; removed stale
+              debugging noise (user: rcgill)
