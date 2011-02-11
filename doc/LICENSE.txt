@@ -1,6 +1,6 @@
 The resources in this directory are excluded from the backdraft license.
 
-All files marked "Copyright (c) 2007 - 2011 Rawld Gill" are Copyright (c) 2007 - 2011, Rawld Gill. All rights reserved.
+All files marked "Copyright (c) <year(s)> Rawld Gill" are Copyright (c) Rawld Gill. All rights reserved.
 
 Redistribution and non-commercial use without modification are permitted provided that the following conditions
 are met:

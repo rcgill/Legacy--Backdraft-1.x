@@ -6,6 +6,10 @@
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0">
     <info>
         <title>backdraft Quickstart</title>
+        <copyright>
+            <year>2010-2011</year>
+            <holder>Rawld Gill</holder>
+        </copyright><pubdate>This document was generated <?dbtimestamp format="Y-m-d H:M:S"?>.</pubdate>
         <author>
             <personname>
                 <firstname> Rawld </firstname>
@@ -404,8 +408,8 @@ $ sudo make install
                 <para>There are lots of different ways to set up your development environment. The
                     suggested configuration is reasonable and simple, but by no means the best or
                     only way.</para>
-            </footnote></para>
-            <screen>
+            </footnote>
+            <programlisting>
 server.modules = ( "mod_alias", "mod_accesslog", "mod_proxy", 
                    "mod_cgi", "mod_fastcgi")
 server.bind          = "127.0.0.1" 
@@ -473,7 +477,7 @@ mimetype.assign             = (
   # default mime type
   ""              =>      "application/octet-stream",
  )
-        </screen>
+        </programlisting></para>
             <para>This will cause lighttpd to listen on port 4243 on localhost.<footnote>
                 <para>So, you probably wondering why 4243? That's because the awesome lisp http
                     server hunchentoot <link xlink:href="http://weitz.de/hunchentoot/"
