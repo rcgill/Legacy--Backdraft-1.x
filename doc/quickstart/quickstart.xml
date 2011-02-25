@@ -40,15 +40,15 @@
     </info>
     <sect1>
         <title>Introduction and Orientation</title>
-        <para>backdraft is a client-side JavaScript framework for writing programs in the browser.
+        <para>backdraft is a client-side Javascript framework for writing programs in the browser.
             This perspective is quite different than that of almost every other web application
             framework available today where the program mostly executes on the server and the
             browser functions as little more than a fancy terminal. With a backdraft application,
-            the server downloads a set of <emphasis role="italic">static</emphasis> JavaScript
+            the server downloads a set of <emphasis role="italic">static</emphasis> Javascript
             resources that implement the program. The word "static" is important: the server does
             not compute scripts and/or HTML on the fly. Usually the server will provide services to
             the program beyond delivering static scripts, but the user interface of the program is
-            implemented 100% at the browser in JavaScript. There are many advantages to this
+            implemented 100% at the browser in Javascript. There are many advantages to this
             design:</para>
         <para>
             <itemizedlist>
@@ -81,15 +81,15 @@
             </itemizedlist>
         </para>
         <para>This design pattern, termed "browser-compute", has been formalized and is discussed in
-            depth in <link xlink:href="http://www.altoviso.com/articles/browser-compute.pdf"
+            depth in <link xlink:href="http://bdframework.org/docs/iface-compute/iface-compute.pdf"
                 >&bc;</link>.</para>
         <para>As usual with all engineering, these advantages have a trade off. By definition, they
             require more work be done at the browser, and, out of the box, the browser is a
-            primitive, even hostile, programming environment. Modern JavaScript libraries like Dojo
+            primitive, even hostile, programming environment. Modern Javascript libraries like Dojo
             go a long way to mitigating this situation by providing a layer that causes all
             supported browsers to behave the same, and by providing a rich library that raises the
             level of abstraction. But, owing to the wide audience to which general-purpose
-            JavaScript libraries are targeted, all of these libraries still view the browser as
+            Javascript libraries are targeted, all of these libraries still view the browser as
             presenting "web pages for a web site", and this model is far too primitive for use
             building applications intended to compete with traditional desktop applications. This is
             largely the reason why most so-called "rich internet applications" feel clunky.</para>
@@ -105,7 +105,7 @@
         <para>This functionality requires about <emphasis role="italic">six lines of
             code</emphasis>, no markup(!), and no server-side programming. The functionality
             provided would take many thousands of lines where you to start with the native browser
-            programming environment. or, hundreds of lines with a good JavaScript library. Again,
+            programming environment. or, hundreds of lines with a good Javascript library. Again,
             that's the purpose of backdraft&mdash;to allow you to <emphasis role="italic"
                 >easily</emphasis> write programs in the browser that look and behave like native
             applications.</para>
@@ -134,13 +134,13 @@
             the three ways to get backdraft:</para>
         <para><orderedlist>
                 <listitem>
-                    <para>Clone the official Fossil repository.</para>
-                </listitem>
-                <listitem>
-                    <para>Download a packaged release.</para>
+                    <para>Download the rollup.</para>
                 </listitem>
                 <listitem>
                     <para>Clone the github mirror.</para>
+                </listitem>
+                <listitem>
+                    <para>Clone the official Fossil repository.</para>
                 </listitem>
             </orderedlist>Version control and issue tracking for the backdraft project is handled by Fossil.<footnote>
                 <para>The Fossil project is hosted at <link
@@ -154,21 +154,12 @@
                     explanation for why Fossil is a good choice.</para>
             </footnote> If you decide to follow backdraft development closely, then the best way to
             get the project is to use Fossil, and the download page explains how to do this. But,
-            since packaged releases are available that make downloading an installation trivial,
-            we'll take that path for this tutorial.</para>
-        <para>Look for the second major heading on the page that reads "Packaged Releases". Within
-            that section, you'll see a table with a set of zip and tar.gz files. The files are named
-            by the timestamp of the repository commit that is contained in the file. For each
-            repository commit there is both a zip and a tar.gz version, and these two versions
-            contain exactly the same content. Finally, notice that the packages contained in the
-            table are listed most recent to least recent. Click on the most recent package of the
-            kind of archive you like (zip or targ.gz) to download the file. </para>
-        <para>If you are paranoid, you can compute the SHA1 or MD5 hashes on the downloaded archives
-            and compare these values to the those posted on the web download page. They should be
-            the same. If they aren't, you weren't paranoid.</para>
-        <para>Once downloaded, decompress the contents to a convenient location. For all of our
-            examples, we decompress to <filename>~/dev/</filename> (for all you Windows devs,
-                <filename>~</filename> is the user home directory--roughly equivalent to "My
+            since a rollup is available that makes downloading and installation trivial, we'll take
+            that path for this tutorial.</para>
+        <para>Look for the second major heading on the page that reads "Super-Easy" and follow those
+            instructions.  Once downloaded, decompress the contents to a convenient location. For
+            all of our examples, we decompress to <filename>~/dev/</filename> (for all you Windows
+            devs, <filename>~</filename> is the user home directory--roughly equivalent to "My
             Documents"). So after decompressing, you should have a directory structure that looks
             like this:</para>
         <programlisting>
@@ -178,42 +169,45 @@
       + demo
       + doc
       + lib
-      + loader
       + test
-    - dijit-v2x/
+    - bdBuild/
       + lib
-      + tests
-    - dojo-v2x/
+    - bdLoad/
+      + build
+      + doc
       + lib
-      + tests
-    backdraft-info.txt
-    dojo-sie-info.txt
-    fossil-info.txt
+      + test
+    - bdParse/
+      + demo
+      + lib
+      + test
+    - bdRead/
+      + src
+      + test
+    - dojotoolkit/
+      + demos
+      + dijit
+      + dojo
+      + dojox
+      + util
         </programlisting>
-        <para>backdraft sits on top of dojo-sie which is contained in the dojo-v2x and dijit-v2x
-            directory trees in the archive. dojo-sie is a separate ALTOVISO-sponsored project that
-            has converted all modules to comply with the <link xlink:href="http://www.commonjs.org/"
-                >commonJS</link>
-            <link xlink:href="http://wiki.commonjs.org/wiki/Modules/AsynchronousDefinition"
-                >Asynchronous Module Definition</link> specification. This work has already been
-            rolled into dojo trunk and will be released with Dojo version 1.6. dojo-sie includes
-            several other forward-leaning dojo enhancements including an AMD-compliant loader.
-            dojo-sie will stay loosely aligned with Dojo's version 2.0 branch until the Dojo's 2.0
-            release at which point dojo-sie should be identical to Dojo 2.0. Any Dojo-enhancements
-            that don't make it into mainline Dojo will be moved to the backdraft project. The
-            dojo-sie project available at <link xlink:href="http://dojo-sie.org"
-                >http://dojo-sie.org</link>. </para>
+        <para>backdraft sits on top of dojo. The soon-to-be-released Dojo v1.6 has converted all
+            dojo and dijit modules to be AMD-compliant (a requirement for backdraft). The
+            dojotoolkit tree included in the rollup is simply a version pulled from the Dojo project
+            trunk during beta release. Occasionally, the backdraft project may provide some
+            additional features for dojo not available in trunk. These will be published at <link
+                xlink:href="http://bdframework.org/bdLoad/dojo.html"
+                >http://bdframework.org/bdLoad/dojo.html</link>.</para>
     </sect1>
     <sect1>
         <title>Setting up a Server</title>
             <para>If you already have an http server that you can configure for use in your
             development environment, then ensure your server can resolve resources starting at the
-            parent directly that holds the <filename>backdraft</filename>,
-                <filename>dojo-v2x</filename>, and <filename>dijit-v2x</filename> trees. If you need
-                help setting this up, see <xref linkend="setting-up-a-server"/>. For the remainder of this tutorial, I'll assume you've
-            unpacked the archive into a directory named <filename>dev</filename> and that the http
-            server you've configured resolves <uri>http://localhost:4243/dev/</uri>  to this
-            directory.</para>
+            directly that holds the <filename>backdraft</filename> tree. If you need help setting
+            this up, see <xref linkend="setting-up-a-server"/>. For the remainder of this tutorial,
+            I'll assume you've unpacked the archive into a directory named <filename>dev</filename>
+            and that the http server you've configured resolves
+                <uri>http://localhost:4243/dev/</uri> to this directory.</para>
         <para>To test your configuration, open up your browser and navigate to
                 <uri>http://localhost:4243/dev/backdraft/demo/smoke.html</uri> and you should see
             something like this:</para>
@@ -260,8 +254,7 @@
             might be implemented in a traditional framework:<orderedlist>
                 <listitem>
                     <para>The server would send the initial HTML page down to the browser. This page
-                        would include a JavaScript event handler to catch the keyboard events.
-                    </para>
+                        would include a Javascript event handler to catch the keyboard events. </para>
                 </listitem>
                 <listitem>
                     <para>At the browser, upon detecting one of the accelerators, the event handler
@@ -358,8 +351,8 @@
             application, although real applications tend to include a pacifier to occupy the user
             while the program loading.</para>
         <para>That concludes this tutorial. To see a typically application frame program
-            demonstration, go to <link xlink:href="http://bdframework.org/demo-appFrame.html"
-                >http://bdframework.org/demo-appFrame.html</link>. The backdraft reference manual is
+            demonstration, go to <link xlink:href="http://bdframework.org/demos/appFrame.html"
+                >http://bdframework.org/demos/appFrame.html</link>. The backdraft reference manual is
             available at <link
                 xlink:href="http://docder.altoviso.com/docder.html?doc=/docs/com.altoviso.backdraft.api.ref.js"
                 >http://docder.altoviso.com/docder.html?doc=/docs/com.altoviso.backdraft.api.ref.js</link>.
@@ -482,7 +475,7 @@ mimetype.assign             = (
                 <para>So, you probably wondering why 4243? That's because the awesome lisp http
                     server hunchentoot <link xlink:href="http://weitz.de/hunchentoot/"
                         >http://weitz.de/hunchentoot/</link> uses 4242 by default!</para>
-            </footnote> If you put the backdraft and dojo-sie project trees some place other than
+            </footnote> If you put the backdraft and other project trees some place other than
                 <filename>~/dev</filename>, then change the <code>sever.document.root</code>
             configuration value accordingly (for example, assuming you installed at <filename>My
                 Documents\dev</filename> in Windows, <filename>~/dev</filename> becomes <filename>My

@@ -3,7 +3,7 @@ repository:   /home/rcgill/fossils/backdraft.fossil
 local-root:   /usr/home/rcgill/git-mirrors/backdraft/work/
 project-code: d8225bb92dc341749fca70013a95f3bf483a9f97
 server-code:  5a21d54623343f043b0aa5451b4d6b715b1909d3
-checkout:     dd8cc8b75a875f0a8ca44498bcc011d4b5ab0122 2011-02-11 09:39:34 UTC
-parent:       403ce93f8ea824800f9ccf7eaf4d8a3b1011c974 2011-02-08 10:25:12 UTC
+checkout:     74917a8e7dc6af12dedf2ee7f3a4d9c8e0faf491 2011-02-25 10:09:06 UTC
+parent:       dd8cc8b75a875f0a8ca44498bcc011d4b5ab0122 2011-02-11 09:39:34 UTC
 tags:         trunk
-comment:      moved loader tutorial to bdLoad project docs (user: rcgill)
+comment:      updated demos to use refactored/upgraded bdBuild (user: rcgill)
