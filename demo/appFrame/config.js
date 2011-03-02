@@ -11,20 +11,12 @@ var require= {
 		name:"dijit",
 		location:"../../../dojotoolkit/dijit",
 		lib:".",
-		main:"lib/main",
-    trees:[
-      // this is the lib tree without the svn, tests, or robot modules
-      [".", ".", "*/.*", "*/dijit/tests/*", /\/robot(x)?/]
-    ]
+		main:"lib/main"
 	},{
 		name:"dojo",
 		location:"../../../dojotoolkit/dojo",
 		lib:".",
-		main:"lib/main-browser",
-    trees:[
-      // this is the lib tree without the tests, svn, plugins, or temp files
-      [".", ".", "*/dojo/tests/*", /\/robot(x)?/, "*/.*", "*/dojo/lib/plugins"]
-    ]
+		main:"lib/main-browser"
 	}],
 
 	deps:["main"],
@@ -48,7 +40,19 @@ var require= {
         i18n:1,
         text:1
       }
-    }],
+    },{
+  		name:"dijit",
+      trees:[
+        // this is the lib tree without the svn, tests, or robot modules
+        [".", ".", "*/.*", "*/dijit/tests/*", /\/robot(x)?/]
+      ]
+  	},{
+  		name:"dojo",
+      trees:[
+        // this is the lib tree without the tests, svn, plugins, or temp files
+        [".", ".", "*/dojo/tests/*", /\/robot(x)?/, "*/.*", "*/dojo/lib/plugins"]
+      ]
+  	}],
 
 		replacements: {
 			"./appFrame.html": [
