@@ -1,4 +1,6 @@
-# backdraft
+# Backdraft - Legacy
+
+This is an archive of version 1.x of the Backdraft framework. It has been completely replaced by Backdraft 2.x.
 
 backdraft is a free and open source JavaScript framework for building browser-hosted GUIs 100% within the browser—no
 plugin, no server-side programming—with all the awesomeness of a native app, but without all the pain.
@@ -90,21 +92,12 @@ Backdraft is built on top of the extremely powerful Dojo JavaScript toolkit. Fur
 to raise the level of abstraction yet higher.
 
 
-
-#Support
-
-All support for this project is handled through the [ticket system](http://bdframework.org/repo/rptview?rn=1). If you
-have a question, find a bug, have patch, or want to request an enhancement, please open a new ticket. Please make an
-attempt to find an answer by utilizing the resources available on the
-[documentation](http://bdframework.org/docs.html) and [demonstrations](http://bdframework.org/demos.html) pages
-before filing a help ticket.
-
 #Commercial Support
 
 Commercial support is available from [ALTOVISO LLC](http://www.altoviso.com). ALTOVISO also has the capability to
 construct custom (closed source) applications as per your particular requirements. You can contact ALTOVISO by dialing
-+1.866.398.9209 x700 (United States, Pacific Time) or by email at
-[support@altoviso.com](mailto:support@altoviso.com)</p>
++1.925-229-0667 (United States, Pacific Time) or by email at
+[consult@altoviso.com](mailto:consult@altoviso.com)</p>
 
 #Donate
 
