@@ -1,4 +1,8 @@
-# Backdraft - Legacy
+### This is an archive of Backdraft 1.x. It has been completely replaced by Backdraft 2.x.
+
+# See [backdraftjs.org](http://backdraftjs.org) for the new framework!
+
+### Backdraft - Legacy
 
 This is an archive of version 1.x of the Backdraft framework. It has been completely replaced by Backdraft 2.x.
 
@@ -99,6 +103,3 @@ construct custom (closed source) applications as per your particular requirement
 +1.925-229-0667 (United States, Pacific Time) or by email at
 [consult@altoviso.com](mailto:consult@altoviso.com)</p>
 
-#Donate
-
-Please help keep this project going strong and [donate](http://bdframework.org/index.html#donate)!
